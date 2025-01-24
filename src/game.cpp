@@ -177,8 +177,8 @@ void UpdateMineCount() {
         }
         else {
             DrawDigit(6, 2, numMinesLeft % 10);
-            DrawDigit(4, 2, numMinesLeft / 10);
-            DrawDigit(2, 2, numMinesLeft / 100);
+            DrawDigit(4, 2, (numMinesLeft / 10) % 10);
+            DrawDigit(2, 2, (numMinesLeft / 100) % 10);
         }
     }
     else {
@@ -192,7 +192,7 @@ void UpdateMineCount() {
         }
         else {
             DrawDigit(6, 2, -numMinesLeft % 10);
-            DrawDigit(4, 2, -numMinesLeft / 10);
+            DrawDigit(4, 2, (-numMinesLeft / 10) % 10);
         }
     }
 }
@@ -205,8 +205,8 @@ void UpdateTimeDisplay() {
     }
     else {
         DrawDigit(28, 2, secondsElapsed % 10);
-        DrawDigit(26, 2, secondsElapsed / 10);
-        DrawDigit(24, 2, secondsElapsed / 100);
+        DrawDigit(26, 2, (secondsElapsed / 10) % 10);
+        DrawDigit(24, 2, (secondsElapsed / 100) % 10);
     }
 }
 
